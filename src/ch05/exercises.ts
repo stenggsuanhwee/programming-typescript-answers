@@ -2,7 +2,9 @@ export default null // Force module mode
 
 // 1. What’s the difference between a class and an interface?
 
-/* A class can have implementations, initialized class fields, and visibility modifiers. It also generates JavaScript code, so it supports instanceof checks at runtime. A class defines both a type and a value. An interface just defines a type, doesn't generate any JavaScript code, can only contain type-level members, and can't contain use modifiers. */
+/* A class can have implementations, initialized class fields, and visibility modifiers. 
+It also generates JavaScript code, so it supports instanceof checks at runtime. A class defines both a type and a value. 
+An interface just defines a type, doesn't generate any JavaScript code, can only contain type-level members, and can't contain use modifiers. */
 
 // 2. When you mark a class' constructor as `private`, that means you can't instantiate or extend the class. What happens when you mark it as `protected` instead? Play around with this in your code editor, and see if you can figure it out.
 
@@ -57,9 +59,13 @@ Shoe.create('balletFlat') // BalletFlat
 Shoe.create('boot') // Boot
 Shoe.create('sneaker') // Sneaker
 
-// 4. [Hard] As an exercise, think about how you might design a typesafe builder pattern. Extend the Builder pattern Builder Pattern example from earlier in this chapter to:
+// 4. [Hard] As an exercise, think about how you might design a typesafe builder pattern. 
+// Extend the Builder pattern Builder Pattern example from earlier in this chapter to:
 
-// 4a. Guarantee at compile time that someone can’t call .send() before setting at least URL and method. Would it be easier to make this guarantee if you also force the user to call methods in a specific order? (Hint: what can you return instead of this?)
+// 4a. Guarantee at compile time that someone can’t call .send() before setting 
+// at least URL and method. 
+// Would it be easier to make this guarantee if you also force the user 
+// to call methods in a specific order? (Hint: what can you return instead of this?)
 
 class RequestBuilder {
   protected data: object | null = null
